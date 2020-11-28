@@ -11,10 +11,5 @@ public class Zoo {
         for (int i = 0; i < 10; i++){
             System.out.print("-");
         }System.out.println();
-
-        Lion lion = new Lion();
-        lion.run();
-        lion.swim();
-        lion.voice("Лев рычит!");
     }
 }
