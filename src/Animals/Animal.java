@@ -1,7 +1,9 @@
 package Animals;
 
-import Food.Food;
+import Food.*;
+public abstract class Animal {
 
-public class Animal {
-    public void Eat(Food food){}
+    public void eat(Food food) {
+
+    }
 }
