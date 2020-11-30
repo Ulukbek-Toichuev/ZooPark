@@ -10,9 +10,10 @@ public class Duck extends Herbivore implements Fly, Voice, Run, Swim {
     }
 
     @Override
-    public String voice(String s){
-        System.out.println(s);
-        return s;
+    public String voice(){
+        String voice = "Утка: кряк! Кряк! Кряк!";
+        //System.out.println(voice);
+        return voice;
     }
 
     @Override
@@ -29,7 +30,23 @@ public class Duck extends Herbivore implements Fly, Voice, Run, Swim {
 
     @Override
     public void eat(Food food) {
+        String feed = "Утка кушает из рук корм.";
+        String grass = "Утка щипает траву у пруда.";
         super.eat(food);
+        boolean isEat = food instanceof Grass;
+        if (isEat == true){
+            int a = (int) (Math.random() *2);
+            switch (a) {
+                case 0:
+                    System.out.println(feed);
+                    break;
+                case 1:
+                    System.out.println(grass);
+                    break;
+            }
+        }else if (isEat == false){
+            System.out.println("Утка не плотоядное животное!");
+        }
     }
 
 

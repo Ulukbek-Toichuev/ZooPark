@@ -15,18 +15,18 @@ public class Lion extends Carnivorous implements Run, Swim, Voice{
     }
 
     @Override
-    public String voice(String s){
-        System.out.println(s);
-        return s;
+    public String voice(){
+        String voice = "Лев: издает рёв!";
+        return voice;
     }
 
     @Override
     public void eat(Food food) {
-        String beef = "Лев кушает говядину";
-        String mutton = "Лев кушает баранину";
+        String beef = "Лев кушает говядину.";
+        String mutton = "Лев кушает баранину.";
         super.eat(food);
         boolean isEat = food instanceof Meat;
-        if (isEat == true){
+        if (isEat){
             int a = (int) (Math.random() *2);
             switch (a) {
                 case 0:
@@ -36,7 +36,7 @@ public class Lion extends Carnivorous implements Run, Swim, Voice{
                     System.out.println(mutton);
                     break;
             }
-        }else if (isEat == false){
+        }else {
             System.out.println("Лев не травоядное животное!");
         }
     }
