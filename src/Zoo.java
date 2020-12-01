@@ -23,14 +23,12 @@ public class Zoo {
         //Вызываются методы утки
         duck.fly();
         duck.run();
-        duck.swim();
         duck.sleep();
 
         drawALine();
 
         //Вызываются методы льва
         lion.run();
-        lion.swim();
         lion.walk();
         lion.sleep();
 
@@ -40,7 +38,6 @@ public class Zoo {
         hippo.walk();
         hippo.run();
         hippo.sleep();
-        hippo.swim();
 
         drawALine();
 
@@ -84,11 +81,12 @@ public class Zoo {
         drawALine();
 
         //Пруд – массив с животными которые умеют плавать.
-        String[] pond = new String[4];
+        String[] pond = new String[5];
         pond[0] = hippo.swim();
         pond[1] = duck.swim();
         pond[2] = pike.swim();
         pond[3] = lion.swim();
+        pond[4] = whiteBear.swim();
     }
 
     //Этот метод нужен для того чтобы отделять выведенные данные на экран

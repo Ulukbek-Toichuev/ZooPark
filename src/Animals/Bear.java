@@ -2,11 +2,18 @@ package Animals;
 
 import Food.*;
 
-public class Bear extends Carnivorous implements Run, Walk, Voice, Sleep {
+public class Bear extends Carnivorous implements Run, Walk, Voice, Sleep, Swim {
 
     @Override
     public void sleep() {
         System.out.println("Медведь спит в своей пещере.");
+    }
+
+    @Override
+    public String swim() {
+        String swim = "Медведь плавает в пруду чтобы охладится.";
+        System.out.println(swim);
+        return swim;
     }
 
     @Override
