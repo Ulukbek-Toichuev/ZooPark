@@ -2,7 +2,14 @@ package Animals;
 
 import Food.*;
 
-public class Elephant extends Herbivore implements Voice, Run, Walk {
+import java.awt.*;
+
+public class Elephant extends Herbivore implements Voice, Run, Walk, Sleep {
+
+    @Override
+    public void sleep() {
+        System.out.println("Слон спит в своем Ангаре.");
+    }
 
     @Override
     public String voice() {
@@ -12,7 +19,7 @@ public class Elephant extends Herbivore implements Voice, Run, Walk {
 
     @Override
     public void run() {
-        System.out.println("Слон бежит.");
+        System.out.println("Слон бегает по своему воьеру.");
     }
 
     @Override

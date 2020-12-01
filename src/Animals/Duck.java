@@ -1,12 +1,17 @@
 package Animals;
 import Food.*;
 
-public class Duck extends Herbivore implements Fly, Voice, Run, Swim {
+public class Duck extends Herbivore implements Fly, Voice, Run, Swim, Sleep {
+
+    @Override
+    public void sleep() {
+        System.out.println("Утка спит в своем домике на пруду.");
+    }
 
     @Override
     public void fly() {
 
-        System.out.println("Утка летает.");
+        System.out.println("Утка летает по своему вольеру.");
     }
 
     @Override
@@ -19,12 +24,12 @@ public class Duck extends Herbivore implements Fly, Voice, Run, Swim {
     @Override
     public void run(){
 
-        System.out.println("Утка бежит.");
+        System.out.println("Утка бежит чтобы взлететь.");
     }
 
     @Override
     public void swim(){
-        System.out.println("Утка плавает.");
+        System.out.println("Утка плавает в пруду.");
     }
 
 
@@ -34,7 +39,7 @@ public class Duck extends Herbivore implements Fly, Voice, Run, Swim {
         String grass = "Утка щипает траву у пруда.";
         super.eat(food);
         boolean isEat = food instanceof Grass;
-        if (isEat == true){
+        if (isEat){
             int a = (int) (Math.random() *2);
             switch (a) {
                 case 0:
@@ -44,7 +49,7 @@ public class Duck extends Herbivore implements Fly, Voice, Run, Swim {
                     System.out.println(grass);
                     break;
             }
-        }else if (isEat == false){
+        }else {
             System.out.println("Утка не плотоядное животное!");
         }
     }
