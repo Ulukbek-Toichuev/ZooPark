@@ -2,33 +2,33 @@ package Animals;
 
 import Food.*;
 
-public class Wolf extends Carnivorous implements Run, Walk, Voice, Sleep {
+public class Bear extends Carnivorous implements Run, Walk, Voice, Sleep {
 
     @Override
     public void sleep() {
-        System.out.println("Волк спит в своей пещере.");
+        System.out.println("Медведь спит в своей пещере.");
     }
 
     @Override
     public void run() {
-        System.out.println("Волк ходит по своему вольеру.");
+        System.out.println("Медведь ходит по своему вольеру.");
     }
 
     @Override
     public void walk() {
-        System.out.println("Волк бегает по своему вольеру.");
+        System.out.println("Медведь бегает по своему вольеру.");
     }
 
     @Override
     public String voice() {
-        String voice = "Волк: воет";
+        String voice = "Медведь: издает рев.";
         return voice;
     }
 
     @Override
     public void eat(Food food) {
-        String beef = "Волк кушает говядину.";
-        String mutton = "Волк кушает баранину.";
+        String beef = "Медведь кушает говядину.";
+        String mutton = "Медведь кушает рыбу.";
         super.eat(food);
         boolean isEat = food instanceof Meat;
         if (isEat) {
@@ -42,7 +42,7 @@ public class Wolf extends Carnivorous implements Run, Walk, Voice, Sleep {
                     break;
             }
         } else {
-            System.out.println("Волк не травоядное животное!");
+            System.out.println("Медведь не травоядное животное!");
         }
     }
 }

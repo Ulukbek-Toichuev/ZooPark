@@ -1,18 +1,17 @@
 import Animals.*;
 import Food.*;
 
-import java.util.Scanner;
-
 public class Zoo {
 
     public static void main(String[] args) {
+
         //Создаются объекты животных и работника
         Lion lion = new Lion();
         Horse horse = new Horse();
-        Fish fish = new Fish();
+        Fish pike = new Fish();
         Duck duck = new Duck();
-        Wolf wolf = new Wolf();
-        Elephant elephant = new Elephant();
+        Bear whiteBear = new Bear();
+        Hippo hippo = new Hippo();
         Worker mike = new Worker();
 
 
@@ -37,10 +36,11 @@ public class Zoo {
 
         drawALine();
 
-        //Вызываются методы слона
-        elephant.walk();
-        elephant.run();
-        elephant.sleep();
+        //Вызываются методы бегемота
+        hippo.walk();
+        hippo.run();
+        hippo.sleep();
+        hippo.swim();
 
         drawALine();
 
@@ -52,14 +52,14 @@ public class Zoo {
         drawALine();
 
         //Вызываются методы волка
-        wolf.run();
-        wolf.walk();
-        wolf.sleep();
+        whiteBear.run();
+        whiteBear.walk();
+        whiteBear.sleep();
 
         drawALine();
 
-        //Вызываются методы рыбы
-        fish.swim();
+        //Вызываются методы щуки
+        pike.swim();
 
         drawALine();
         /* Создается объект рабочего и вызывается все его методы с разными видами параметров.*/
@@ -67,19 +67,28 @@ public class Zoo {
         //Работник кормит животных
         mike.feed(lion, meat);
         mike.feed(duck, grass);
-        mike.feed(elephant, grass);
-        mike.feed(fish, meat);
+        mike.feed(hippo, grass);
+        mike.feed(pike, meat);
         mike.feed(horse, grass);
-        mike.feed(wolf, meat);
+        mike.feed(whiteBear, meat);
 
         drawALine();
 
         //Животные подают голос работнику
-        mike.getVoice(elephant);
+        mike.getVoice(hippo);
         mike.getVoice(lion);
         mike.getVoice(duck);
         mike.getVoice(horse);
-        mike.getVoice(wolf);
+        mike.getVoice(whiteBear);
+
+        drawALine();
+
+        //Пруд – массив с животными которые умеют плавать.
+        String[] pond = new String[4];
+        pond[0] = hippo.swim();
+        pond[1] = duck.swim();
+        pond[2] = pike.swim();
+        pond[3] = lion.swim();
     }
 
     //Этот метод нужен для того чтобы отделять выведенные данные на экран

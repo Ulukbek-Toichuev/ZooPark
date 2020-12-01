@@ -4,14 +4,16 @@ import Food.*;
 
 public class Fish extends Carnivorous implements Swim{
     @Override
-    public void swim(){
-        System.out.println("плавает.");
+    public String swim() {
+        String swim = "Щука плавает.";
+        System.out.println(swim);
+        return swim;
     }
 
     @Override
     public void eat(Food food) {
-        String feed = "Рыба питается планктонами и подводными насекомыми.";
-        String grass = "Рыба кушает корм.";
+        String feed = "Щука питается мелкими рыбами и подводными насекомыми.";
+        String grass = "Щука кушает корм.";
         super.eat(food);
         boolean isEat = food instanceof Meat;
         if (isEat){
@@ -25,7 +27,7 @@ public class Fish extends Carnivorous implements Swim{
                     break;
             }
         }else {
-            System.out.println("Рыба не травоядное животное!");
+            System.out.println("Щука не травоядное животное!");
         }
     }
 }

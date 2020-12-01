@@ -20,8 +20,10 @@ public class Lion extends Carnivorous implements Run, Swim, Voice, Walk, Sleep{
     }
 
     @Override
-    public void swim(){
-        System.out.println("Лев плавает в пруду чтобы охладится.");
+    public String swim() {
+        String swim = "Лев плавает в пруду чтобы охладится.";
+        System.out.println(swim);
+        return swim;
     }
 
     @Override
